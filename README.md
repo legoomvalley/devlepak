@@ -1,6 +1,6 @@
-#Larabrew default installer
+# Larabrew default installer
 
-###Requirements
+### Requirements
 - Laravel 9
 - Composer
 - Php 8
