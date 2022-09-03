@@ -17,9 +17,11 @@ Route::get('/', function () {
     return view('auth.login');
 });
 
+//generate all the Auth route
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+//already include all the function in the controller including the method
 Route::resource('/coffee', App\Http\Controllers\CoffeeController::class);
 Route::resource('/brew', App\Http\Controllers\BrewController::class);
