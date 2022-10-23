@@ -31,13 +31,21 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
                         @auth
+                        @can('manage coffee')
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('coffee.index') }}">{{ __('Coffee') }}</a>
                         </li>
-
+                        @endcan
+                        @can('manage brewing')
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('brew.index') }}">{{ __('Brew') }}</a>
                         </li>
+                        @endcan
+                        @can('manage user')
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('user.index') }}">{{ __('User') }}</a>
+                        </li>
+                        @endcan
                         @endauth
                     </ul>
 

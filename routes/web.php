@@ -25,3 +25,4 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 //already include all the function in the controller including the method
 Route::resource('/coffee', App\Http\Controllers\CoffeeController::class);
 Route::resource('/brew', App\Http\Controllers\BrewController::class);
+Route::resource('/user', App\Http\Controllers\UserController::class);
